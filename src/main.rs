@@ -12,12 +12,12 @@ fn is_even(number: i32) -> bool {
 }
 
 #[cfg(test)]
-mod test {
-    use super::*;
+mod tests {
+    use super::is_even;
 
     #[test]
     fn test_is_even() {
-        assert_eq!(is_even(4), true);
-        assert_eq!(is_even(7), false);
+        assert!(is_even(4));
+        assert!(!is_even(7));
     }
 }
