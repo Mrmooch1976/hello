@@ -4,6 +4,12 @@ fn main() {
     let mut rng = rand::rng();
     let random_number = rng.random_range(1..=10);
     println!("The random number is: {}", random_number);
+
+    if is_even(random_number) {
+        println!("That is an even number!");
+    } else {
+        println!("That is an odd number!");
+    }
 }
 
 fn is_even(number: i32) -> bool {
