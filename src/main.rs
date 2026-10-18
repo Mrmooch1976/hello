@@ -1,8 +1,10 @@
-use rand::RngExt;
+use rand::Rng;
 
 fn main() {
-    let random_number = rand::rng().random_range(1..=10);
+    let mut rng = rand::thread_rng();
+    let random_number: i32 = rng.gen_range(1..=10);
     println!("The random number is: {}", random_number);
+    println!("Is even? {}", is_even(random_number));
 }
 
 fn is_even(number: i32) -> bool {
